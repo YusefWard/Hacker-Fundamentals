@@ -176,7 +176,7 @@ Windows Post Exploitation:
 	net user
 	net user /domain
 	net group "Domain Admins" /domain
-	
+	net user ashlie.gwenette /domain
 
 
 Commands:
